@@ -1,0 +1,3 @@
+CREATE TABLE bank(id BIGSERIAL PRIMARY KEY, name VARCHAR UNIQUE, commission_individual INT, commission_legal INT,creation_date TIMESTAMP, modification_date TIMESTAMP);
+CREATE TABLE client(id BIGSERIAL PRIMARY KEY, name VARCHAR UNIQUE, individual BOOLEAN);
+CREATE TABLE account(id BIGSERIAL PRIMARY KEY, number VARCHAR UNIQUE, balance NUMERIC, client_id BIGINT, bank_id BIGINT, currency VARCHAR, creation_date TIMESTAMP, modification_date TIMESTAMP);
